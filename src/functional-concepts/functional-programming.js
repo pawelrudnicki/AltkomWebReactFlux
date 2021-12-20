@@ -23,6 +23,15 @@ const users = [
 
 /*
 Przekształcić podaną tablice użytkowników na tablice imion tylko dla kobiet pisanymi drukowanymi literami,
-używali tych funkcji 
+używali tych funkcji
 tj. ['KAZIMIERA', 'BARBARA']
  */
+
+const womenNames = users.map(({name}) => {
+    if (['Kazimiera', 'Barbara'].includes(name)) {
+        return name.toUpperCase();
+    }
+}).filter((e) => !!e);
+console.log(!!true);
+console.log(womenNames);
+

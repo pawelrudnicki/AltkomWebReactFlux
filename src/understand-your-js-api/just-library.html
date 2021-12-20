@@ -17,6 +17,25 @@
     </style>
 </head>
 <body>
-
+<!--<div class="helloWrapper">-->
+<!--    <h2>Hello World 2</h2>-->
+<!--    <p class="box">-->
+<!--        Welcome to my example-->
+<!--    </p>-->
+<!--</div>-->
+<div id="root"></div>
+<script type="text/babel">
+    function HelloReactComponent () {
+        return (
+            <div className="helloWrapper">
+                <h2>Hello World 2</h2>
+                <p className="box">
+                    Welcome to my example
+                </p>
+            </div>
+        )
+    }
+    ReactDOM.render(<HelloReactComponent/>, document.getElementById("root"));
+</script>
 </body>
 </html>

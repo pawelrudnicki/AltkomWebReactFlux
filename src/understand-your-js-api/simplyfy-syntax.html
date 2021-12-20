@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>React is just a library</title>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <style>
+        .helloWrapper {
+            text-align: center;
+        }
+        .box {
+            padding: 15px;
+            border: 3px solid darkred;
+        }
+    </style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+
+    function InnerComponent () {
+        return (
+            <p>test</p>
+        )
+    }
+
+    // const eveluateTheJavaScript = (x, y) => (
+    //     <span>{`${x} + ${y} = ${x + y}`}</span>
+    // )
+
+    function HelloReactComponent () {
+        return (
+            <div className="helloWrapper">
+                <h2>Hello World 2</h2>
+                <p className="box">
+                    {
+                        new Array(10).fill(1).map(() => <InnerComponent/>)
+                    }
+                </p>
+            </div>
+        )
+    }
+    const $root = document.getElementById("root");
+    ReactDOM.render(<HelloReactComponent/>, $root);
+</script>
+</body>
+</html>

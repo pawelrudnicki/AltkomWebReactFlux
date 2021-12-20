@@ -24,3 +24,7 @@ const inDoorAPI = {
 };
 
 // 1 zadanie - wyodrebnij manufacturer
+const {fridge: {manufacturer}} = inDoorAPI;
+console.log(manufacturer);
+
+// 2 zadanie - wyciągnij ser z lodówki

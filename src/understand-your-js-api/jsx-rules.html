@@ -19,7 +19,51 @@
 <body>
 <div id="root"></div>
 <script type="text/babel">
-    
+    // słowo class jest zabronione - używamy className
+    // const iCannotUseClassWorld = (
+    //     <div class="wrapper">
+    //         <p class="box">
+    //             This is box
+    //         </p>
+    //     </div>
+    // )
+
+    // Blok kodu JSX może mieć tylko jeden element główny (top'owy / roo'owy)
+    // const iNeedToHaveOneRootElement = (
+    //     <>
+    //         <div className="helloWrapper">
+    //             <h2>Hello World 2</h2>
+    //             <p className="box">
+    //                 Welcome to my example
+    //             </p>
+    //         </div>
+    //         <div>
+    //             Second element
+    //         </div>
+    //     </>
+    // )
+
+    // style jako obiekt w JSX
+    // const styleAttributeNeedToAnObject = (
+    //     <div>
+    //         <div>Info</div>
+    //         <p style={{"background-color": "lightgreen"}}>Operation successful</p>
+    //     </div>
+    // )
+
+    // PascalCase działa, camelCase nie działa
+    // function CamelCaseWontWork () {
+    //     return (<div>What is wrong with me?</div>)
+    // }
+
+    const elementWithCommentedBlockOfCode = (
+        <div>
+            <div>Hello xyz!</div>
+            {/*Komentarz*/}
+        </div>
+    )
+
+    ReactDOM.render(<CamelCaseWontWork/>, document.getElementById("root"));
 </script>
 </body>
 </html>

@@ -1,8 +1,8 @@
 function callMyGrandpa(name, phoneNo, device = 'Samsung') {
-    console.log(`Grab ${device} dial ${phoneNo} call ${name}`);
+    console.log(`Grab ${device} dial +48${phoneNo} call ${name}`);
 }
 
-callMyGrandpa('Józef', '+48 601-284-212');
+callMyGrandpa('Józef', '601-284-212');
 callMyGrandpa('Staszek', '0000-1202917');
-callMyGrandpa('Zbyszek', '+48 601-284-212');
-callMyGrandpa('Antoni', '+48 601-284-212', 'iPhone');
+callMyGrandpa('Zbyszek', '601-284-212');
+callMyGrandpa('Antoni', '601-284-212', 'iPhone');

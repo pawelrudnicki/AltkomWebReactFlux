@@ -25,6 +25,17 @@ const inDoorAPI = {
 
 // 1 zadanie - wyodrebnij manufacturer
 const {fridge: {manufacturer}} = inDoorAPI;
-console.log(manufacturer);
+// console.log(manufacturer);
 
 // 2 zadanie - wyciągnij ser z lodówki
+const { fridge: {content: [,,theCheese]}} = inDoorAPI;
+
+// console.log(theCheese)
+
+function logIn({userName, isAdmin}) {
+    console.log(userName);
+    console.log(isAdmin);
+}
+
+logIn({userName: 'Admin', isAdmin: true});
+

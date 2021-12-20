@@ -16,8 +16,8 @@ const someNumbers = myNumbersArray.some((element) => element > 10);
 // console.log(someNumbers);
 
 const mutableArray = ['a', 'b', 'c', 'd'];
-// mutableArray.push('e');
-// mutableArray.pop();
-// mutableArray.unshift('x');
-// mutableArray.shift();
+// mutableArray.push('e'); - dodanie elementu na koniec
+// mutableArray.pop(); - wyjecie ostatniego elementu
+// mutableArray.unshift('x'); - dodanie elementu na poczatek
+// mutableArray.shift(); - wyjecie pierwszego elementu
 console.log(mutableArray);

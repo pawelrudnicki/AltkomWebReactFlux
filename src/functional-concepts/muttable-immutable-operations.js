@@ -17,6 +17,7 @@ const myUpperLetters = letters.map(e => e);
 
 
 const myFruits = ['apple', 'banana', 'mango', 'cherry'];
-const myFruitsWithoutCherry = [];
+const myFruitsWithoutCherry = [...myFruits].slice(0, -1);
+console.log(myFruitsWithoutCherry);
 
 

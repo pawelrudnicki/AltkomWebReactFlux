@@ -12,5 +12,11 @@
 
 const letters = ['a', 'b', 'c'];
 // #2 Zadanie: Jak utworzyc tablice ze zmofyfikowanymi elementami
-const myUpperLetters = [];
+const myUpperLetters = letters.map(e => e);
+// console.log(letters === myUpperLetters);
+
+
+const myFruits = ['apple', 'banana', 'mango', 'cherry'];
+const myFruitsWithoutCherry = [];
+
 

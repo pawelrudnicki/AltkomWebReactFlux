@@ -18,7 +18,9 @@
     function ListOfElements() {
         return (
             <ul>
-                {fruits}
+                {
+                    fruits.map((el, index) => <li key={`${index}_${el}`}>{el}</li>)
+                }
             </ul>
         )
     }

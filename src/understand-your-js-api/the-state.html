@@ -13,13 +13,23 @@
     class App extends React.Component {
 
         state = {
-            name: "World"
+            name: "World",
+            testProperty: "Test property"
+        };
+
+        changeMyName = () => {
+            this.setState({
+                name: "Paweł"
+            })
         };
 
         render() {
+            console.log("SHOW ME STATE => ", this.state);
+            const {name} = this.state;
             return (
                 <div>
-                    <h1>Hello</h1>
+                    <h1>Hello {name}</h1>
+                    <button onClick={this.changeMyName}>Change my name</button>
                 </div>
             )
         }

@@ -11,7 +11,18 @@
 <div id="root"></div>
 <script type="text/babel">
     class App extends React.Component {
-        
+
+        state = {
+            name: "World"
+        };
+
+        render() {
+            return (
+                <div>
+                    <h1>Hello</h1>
+                </div>
+            )
+        }
     }
     ReactDOM.render(<App/>, document.getElementById("root"));
 </script>

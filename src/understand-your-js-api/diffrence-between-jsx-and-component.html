@@ -10,9 +10,27 @@
 <body>
 <div id="root"></div>
 <script type="text/babel">
-    
 
-    ReactDOM.render(null, document.getElementById("root"));
+    function MyComponent() {
+        return <p>Hello component!</p>
+    }
+
+    const MyOtherComponent = () => (<p>Hello other component!</p>)
+
+    const MyElement = (<p>Hello element!</p>)
+
+    const App = () => (
+        <main>
+            <h1>Playground</h1>
+            <section>
+                <MyComponent/>
+                <MyOtherComponent/>
+                {MyElement}
+            </section>
+        </main>
+    )
+
+    ReactDOM.render(<App/>, document.getElementById("root"));
 </script>
 </body>
 </html>

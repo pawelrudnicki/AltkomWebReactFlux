@@ -12,10 +12,14 @@
 
 <script type="text/babel">
 
-    function Sentences() {
+    function Sentences(props) {
+        console.log("SHOW ME PROPS => ", props);
         return (
             <div>
                 <h2>Zdania: </h2>
+                {
+                    [...props.children].filter((item, index) => index % 2 !== 0 ? item : null)
+                }
             </div>
         )
     }

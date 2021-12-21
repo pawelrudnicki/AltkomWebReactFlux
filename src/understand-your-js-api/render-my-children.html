@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Render props.children </title>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+
+    function Sentences() {
+        return (
+            <div>
+                <h2>Zdania: </h2>
+            </div>
+        )
+    }
+
+    function App() {
+        return (
+            <Sentences>
+                <div>To jest moje 1 zdanie</div>
+                <div>To jest moje 2 zdanie</div>
+                <div>To jest moje 3 zdanie</div>
+                <div>To jest moje 4 zdanie</div>
+                <div>To jest moje 5 zdanie</div>
+                <div>To jest moje 6 zdanie</div>
+            </Sentences>
+        )
+    }
+
+    ReactDOM.render(<App/>, document.getElementById("root"))
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Render collection of elements </title>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+    const fruits = ["apple", "banana", "mango", "cherry"];
+    /*
+    Zadanie:
+    Zamień elementy tablicy fruits zamienili na atrybuty <li></li>
+     */
+    function ListOfElements() {
+        return (
+            <ul>
+                {fruits}
+            </ul>
+        )
+    }
+
+    ReactDOM.render(<ListOfElements/>, document.getElementById("root"))
+</script>
+</body>
+</html>

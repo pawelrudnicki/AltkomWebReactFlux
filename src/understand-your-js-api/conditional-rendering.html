@@ -11,6 +11,9 @@
 <div id="root"></div>
 
 <script type="text/babel">
+
+    const HappySunnyFace = () => (<span> 😎 </span>)
+
     class Toggler extends React.Component {
 
         state = {
@@ -27,19 +30,21 @@
             const { isWeatherFine } = this.state;
             return (
                 <div>
-                    Pogoda jest zła
+                    Pogoda jest { isWeatherFine ? "Dobra" : "Zła" }
                     <div>
-                        <button onClick={}>Zmien pogode</button>
+                        <button onClick={this.onButtonClick}>Zmien pogode</button>
                     </div>
                     <div>
                         {
-                            /*dodatkowy komponent o nazwie HappySunnyFace - 😎 */
+                            isWeatherFine && <HappySunnyFace/>
                         }
                     </div>
                 </div>
             )
         }
     }
+
+    ReactDOM.render(<Toggler/>, document.getElementById("root"));
 </script>
 </body>
 </html>

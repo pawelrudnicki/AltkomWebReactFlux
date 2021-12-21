@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> State, props and composition </title>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+
+    const Greetings = ({name}) => (
+        <div>
+            Hello {name}
+        </div>
+    )
+
+    class App extends React.Component {
+
+        constructor(props) {
+            super(props);
+            this.state = {
+                name: "World"
+            }
+        }
+
+        changeMyName = () => {
+            this.setState({
+                name: "Paweł"
+            })
+        };
+
+        render() {
+            const {name} = this.state;
+            return (
+                <div>
+                    <Greetings name={name}/>
+                    <button onClick={this.changeMyName}>Change my name</button>
+                </div>
+            )
+        }
+    }
+    ReactDOM.render(<App/>, document.getElementById("root"));
+</script>
+</body>
+</html>

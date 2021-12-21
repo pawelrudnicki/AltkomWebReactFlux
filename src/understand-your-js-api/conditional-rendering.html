@@ -26,6 +26,12 @@
             }))
         }
 
+        // shouldComponentUpdate(nextProps, nextState) {
+        //     const {isWeatherFine} = this.state
+        //     if (isWeatherFine !== nextState.isWeatherFine) return false;
+        //     return true;
+        // }
+
         render () {
             const { isWeatherFine } = this.state;
             return (
@@ -43,6 +49,8 @@
             )
         }
     }
+
+    export default withAuth(Toogler);
 
     ReactDOM.render(<Toggler/>, document.getElementById("root"));
 </script>
